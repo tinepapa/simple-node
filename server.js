@@ -2,10 +2,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const favoriteFood = process.env.DOCKER_USERNAME;
+const userName = process.env.DOCKER_USERNAME;
 async function main() {
   while(true) {
-    console.log(`My DockerHub username is ${favoriteFood}`);
+    console.log(`My DockerHub username is ${userName}`);
     await sleep(5000);
   }
 }
