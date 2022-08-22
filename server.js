@@ -1,5 +1,5 @@
 // Set a local variable populated by the environment variable $NAME
-const FAVORITE_INSTRUCTOR = process.env.NAME;
+const FAVORITE_INSTRUCTOR = process.env.DOCKER_USERNAME;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
