@@ -1,11 +1,13 @@
+// Set a local variable populated by the environment variable $NAME
+const FAVORITE_INSTRUCTOR = process.env.DOCKER_USERNAME;
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-const userName = process.env.DOCKER_USERNAME;
 async function main() {
   while(true) {
-    console.log(`My DockerHub username is ${userName}`);
+    console.log(`${FAVORITE_INSTRUCTOR} rocks!`);
     await sleep(5000);
   }
 }
